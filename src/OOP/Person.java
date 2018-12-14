@@ -18,7 +18,8 @@ public class Person {
         System.out.println(FullName + "  говорит: " + message);
 
     }
-    public  void move (){
+
+    public void move() {
 
 
     }
