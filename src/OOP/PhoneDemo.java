@@ -1,4 +1,4 @@
-package OOP;
+package oop;
 
 import java.sql.SQLOutput;
 
@@ -8,15 +8,15 @@ public class PhoneDemo {
         Phone phone2 = new Phone("+380951586666", "Motorolla", 250);
         Phone phone3 = new Phone();
         Phone phone4 = new Phone("+3809515865555", "Nokia");
-        phone1.number = "+380951586789";
-        phone1.model = "Apple";
-        phone1.weight = 175.4;
+        phone1.setNumber("+380951586789");
+        phone1.setModel("Apple");
+        phone1.setWeight(156.2);
 
 
-        System.out.println(phone1.number + " " + phone1.model + " " + phone1.weight);
-        System.out.println(phone2.number + " " + phone2.model + " " + phone2.weight);
-        System.out.println(phone3.number + " " + phone3.model + " " + phone3.weight);
-        System.out.println(phone4.number + " " + phone4.model + " " + phone4.weight);
+        System.out.println(phone1.getNumber() + " " + phone1.getModel() + " " + phone1.getWeight());
+        System.out.println(phone2.getNumber() + " " + phone2.getModel() + " " + phone2.getWeight());
+        System.out.println(phone3.getNumber() + " " + phone3.getModel() + " " + phone3.getWeight());
+        System.out.println(phone4.getNumber() + " " + phone4.getModel() + " " + phone4.getWeight());
 
 
         phone1.receiveCall("Вова");
@@ -24,7 +24,8 @@ public class PhoneDemo {
 
 
         System.out.println(phone1.getNumber());
-
+        phone1.sendMessage("Нужна помощь", "911", "112", "102");
+        System.out.println(Phone.getCount());
 
     }
 }
