@@ -1,6 +1,6 @@
 package OOP;
 
-public class Library {
+public class Reader {
     String Name, Surname, LibraryNumber, Faculty, Birthday, PhoneNumber;
 
 
