@@ -1,4 +1,4 @@
-package OOP;
+package lesson7;
 
 import java.sql.SQLOutput;
 
