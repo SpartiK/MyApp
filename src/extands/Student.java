@@ -1,17 +1,18 @@
 package extands;
 
 public class Student {
-private String firstName,lastName, group;
-private double avgMark;
+    private String firstName, lastName, group;
+    private double avgMark;
 
-public Student{String firstName, String lastName, String group, double avgMark}{
-    this.firstName=firstName;
-    this.lastName=lastName;
-    this.group=group;
-    this.avgMark=avgMark;
+    public Student(String firstName, String lastName, String group, double avgMark) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.group = group;
+        this.avgMark = avgMark;
 
     }
-    public Student{
+
+    public Student(){
 
     }
 
@@ -45,5 +46,8 @@ public Student{String firstName, String lastName, String group, double avgMark}{
 
     public void setAvgMark(double avgMark) {
         this.avgMark = avgMark;
+    }
+    public int getScholarship(){
+        return getAvgMark() == 5 ? 200:180;
     }
 }

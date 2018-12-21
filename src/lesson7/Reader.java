@@ -28,7 +28,7 @@ for (String i : books){
 
     public void takeBook(Book... Books) {
         System.out.println(Name + " взял такие книги :");
-        for (Object a : Books){
+        for (Book a : Books){
             System.out.println();
         }
     }
