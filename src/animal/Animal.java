@@ -1,7 +1,7 @@
 package animal;
 
 public class Animal {
-    public String food, location;
+     String food, location;
 
     public Animal(String food, String location) {
         this.food = food;
@@ -17,7 +17,7 @@ public class Animal {
     }
 
     public void sleap(Animal animal) {
-        System.out.println(animal.toString() + " Спит");
+        System.out.println(animal + " Спит");
 
 
     }

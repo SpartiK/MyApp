@@ -1,12 +1,10 @@
 package animal;
 
-import com.company.vehicles.Car;
 
 public class Vet {
 
     public void treatAnimal(Animal animal) {
-        System.out.println(animal.toString() + " eat " + animal.food + " and live  " + animal.location);
-
+        System.out.println(animal+ " eat " + animal.food + " and live  " + animal.location);
     }
 
     public static void main(String[] args) {

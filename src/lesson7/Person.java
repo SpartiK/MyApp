@@ -36,8 +36,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "'" + FullName + '\'' +
-                ", Возраст = " + Age;
+        return String.format("Person(+ fullName='%s\',age=%d)", FullName, Age);
     }
 
     public void move() {

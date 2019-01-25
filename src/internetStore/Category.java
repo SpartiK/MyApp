@@ -80,10 +80,10 @@ public class Category {
                     System.out.println("Выбор товара..");
                     switch (sc.nextInt()) {
                         case 1:
-                            userList.users[UserList.number].basket.basketAdd(samsung, kivi, xiaomi5);
+                            userList.users[UserList.number].basket.basketAdd();
                             break;
                         case 2:
-                            userList.users[userList.number].basket.basketAdd(samsung8, lg, xiaomi5);
+                           // userList.users[userList.number].basket.basketAdd();
 
                             break;
                     }
@@ -92,6 +92,7 @@ public class Category {
                 case BUY:
                     exit = true;
                     if (UserList.auntification) {
+
                         userList.users[userList.number].basket.buy();
                         userList.users[userList.number].basket.toString();
                         break;

@@ -1,7 +1,13 @@
 package animal;
 
-public class Dog extends Animal {
+import java.io.Serializable;
+
+public class Dog extends Animal implements Serializable {
     String favoriteToy;
+
+    public Dog(String food, String location) {
+        super(food, location);
+    }
 
     public Dog(String food, String location, String favoriteToy) {
         super(food, location);
@@ -26,7 +32,7 @@ public class Dog extends Animal {
     }
 
     public String getType() {
-        return "Cat";
+        return "Dog";
     }
 
 }

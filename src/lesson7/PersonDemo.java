@@ -7,7 +7,8 @@ public class PersonDemo {
 
         person1.talk(" Привет всем!");
         person2.talk(" Я незнакомец!");
-
+        person1.toString();
+        System.out.println(person1);
 
     }
 
