@@ -12,5 +12,9 @@ public class PredicateDemo {
 
         System.out.println(predicate2.test(""));
         System.out.println(predicate2.test("str"));
+
+        System.out.println(predicate1.and(predicate2).test("sds"));
+        System.out.println(predicate1.and(predicate2).test(""));
+        System.out.println(predicate1.and(predicate2).test(null));
     }
 }

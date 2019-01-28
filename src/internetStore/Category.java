@@ -33,8 +33,9 @@ public class Category {
         Product samsung = new Product("SamsungTV", 650.50, 4.5);
         Product kivi = new Product("Kivi", 400, 4.5);
 
-        Category categorySmart = new Category("SamrtPhone", Iphone8, samsung8, xiaomi5);
+        Category categorySmart = new Category("SmartPhone", Iphone8, samsung8, xiaomi5);
         Category categoryTV = new Category("TV", lg, samsung, kivi);
+        Category allProducts = new Category("ALLPRODUCTS", Iphone8, samsung, xiaomi5, lg, samsung, kivi);
         CategoryList categoryList = new CategoryList(categorySmart, categoryTV);
 
         Basket basket1 = new Basket();
@@ -51,6 +52,7 @@ public class Category {
         userList.add(user1, user2, user3, user4);
 
         Scanner sc = new Scanner(System.in);
+        Scanner sc1 = new Scanner(System.in);
 
 
         boolean exit = true;
@@ -77,18 +79,47 @@ public class Category {
                     }
                     break;
                 case ADDBASKET: // Не реализовано!!
-                    System.out.println("Выбор товара..");
+                    int count = 0;
+                    Product[] allProducts1 = new Product[4];
+                    String s;
+                    for (int i = 0; i < allProducts1.length; i++) {
+                        s = sc1.nextLine();
+                        for (int j = 0; j < allProducts.products.length; j++){
+                        if (s.equals(allProducts.products[j].name)) {
+                            allProducts1[i] = allProducts.products[j];
+                            //System.out.println(allProducts1[i]);
+                            count++;
+                        }
+                    }
+            }
+                    System.out.println("Не вышло");
+
+                    Product[] products1 = new Product[count];
+                    for (int i = 0; i < products1.length; i++) {
+                        if (allProducts1[i] != null) {
+                            products1[i] = allProducts1[i];
+                        }
+                    }
+
+                    userList.users[userList.number].basket.basketAdd(products1);
+                    System.out.println("Вышло");
+
+
+
+
+
+
+                    /*System.out.println("Выбор товара..");
                     switch (sc.nextInt()) {
                         case 1:
                             userList.users[UserList.number].basket.basketAdd();
                             break;
                         case 2:
                            // userList.users[userList.number].basket.basketAdd();
-
-                            break;
-                    }
-
+*/
                     break;
+
+
                 case BUY:
                     exit = true;
                     if (UserList.auntification) {
