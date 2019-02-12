@@ -40,7 +40,6 @@ public class ThreeGen<T extends Comparable, V extends Animal & Serializable,K ex
     public static void main(String[] args) {
         ThreeGen<String, Dog,Integer> tgObj = new ThreeGen<>("str", new Dog("Meat","Boan"),34);
         tgObj.showTypes();
-
 //        int v = tgObj.getOb1();
 //        System.out.println("value: " + v);
 //

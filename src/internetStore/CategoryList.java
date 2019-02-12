@@ -12,9 +12,11 @@ public class CategoryList {
     public void categoryName(){
         for (Category category:categories
              ) {
-            System.out.println(category.categoryName);
+            System.out.println(category.getCategoryName());
         }
     }
+
+
 
     @Override
     public String toString() {

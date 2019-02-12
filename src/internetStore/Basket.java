@@ -1,37 +1,45 @@
 package internetStore;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.time.LocalDate;
+import java.util.*;
 
 public class Basket {
-     Product[] products;
+    LocalDate date;
+List <Product> basketList = new ArrayList<>();
 
-    public Basket(Product... product) {
-        products = new Product[product.length];
-        if (product.length >= 0) System.arraycopy(product, 0, products, 0, product.length);
-
+    public Basket() {
     }
-    public void basketAdd(Product[]pr) {
-        products = pr;
+
+    public Basket(List<Product> basketList) {
+        this.basketList = basketList;
+    }
+
+    public void basketAdd(Product...products) {
+        for (Product pr:products) {
+            basketList.add(pr);
+        }
 
     }
 
 
     public void buy() {
+        this.date = LocalDate.now();
         double count = 0;
         System.out.println("Считаю сумму...");
-        for (Product pr : products
+        for (Product pr : basketList
         ) {
-            if (pr!=null){
-            count +=pr.price;
-        }}
-        System.out.println("Для оплаты сумма =" + count);
+            if (pr != null) {
+                count += pr.price;
+            }
+        }
+        System.out.println("Для оплаты сумма = " + count + "  " + date);
     }
 
     @Override
     public String toString() {
         return "Basket{" +
-                "products=" + Arrays.toString(products) +
+                "date=" + date +
+                ", basketList=" + basketList +
                 '}';
     }
 }

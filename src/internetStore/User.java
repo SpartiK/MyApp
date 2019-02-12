@@ -1,20 +1,17 @@
 package internetStore;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class User {
     Basket basket;
     String user,password;
-
-    public User(Basket basket, String user, String password) {
-        this.basket = basket;
+    public User( String user, String password) {
+        this.basket = new Basket();
         this.user = user;
         this.password = password;
-    }
-    public void inditification(Scanner scanner){
-        if (scanner.next()==user){
-            System.out.println("Привет "+ user);
-        }
+
     }
 
     @Override
